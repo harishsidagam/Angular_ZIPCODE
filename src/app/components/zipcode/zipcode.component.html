@@ -1,0 +1,19 @@
+<section class="hero hero-body is-medium is-warning">
+  <h1 class="title">INDIA Location Info</h1>
+  <h2 class="subtitle">Enter a zipcode to get the location info</h2>
+<form [formGroup]="form" (ngSubmit)="submit($event)">
+    <div class="field">
+    <input class="input zip is-medium" type="text" formControlName="zipcode" placeholder="Enter Zipcode">&nbsp;&nbsp;
+    <button class="button is-medium is-info" type="submit" >Submit</button>
+  </div>
+</form>
+
+</section>
+<p>City : {{this.zip?.places[0]["place name"]}}</p>
+<p>State : {{this.zip?.places[0]["state"]}}</p>
+<p>Longitude : {{this.zip?.places[0]["longitude"]}}</p>
+<p>Latitude : {{this.zip?.places[0]["latitude"]}}</p>
+
+
+
+
