@@ -1,3 +1,6 @@
+**#Overview**
+Angular application finding the location from zipcode 
+Angular 11 and Bulma CSS are used
 # Zipcode
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.14.
