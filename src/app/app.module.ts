@@ -7,11 +7,13 @@ import { AppComponent } from './app.component';
 import { ZipcodeComponent } from './components/zipcode/zipcode.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AuthService } from './service/auth.service';
+import { PopupComponent } from './components/popup/popup.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ZipcodeComponent
+    ZipcodeComponent,
+    PopupComponent
   ],
   imports: [
     BrowserModule,

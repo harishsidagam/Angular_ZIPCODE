@@ -9,6 +9,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class ZipcodeComponent implements OnInit {
 form:any
 zip :any
+showMsg :any;
   constructor(public fb :FormBuilder, private http:HttpClient) { }
 
   ngOnInit(): void {
@@ -33,8 +34,16 @@ zip :any
       this.http.get(url).subscribe((res)=>{
         this.zip = res
         console.log(this.zip)
+
       })
+      if(this.zip!=null){
+        this.showMsg = true
+      }
+      if(this.zip==null){
+        this.showMsg = false
+      }
     }
+
 
 
 

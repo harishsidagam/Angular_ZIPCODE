@@ -8,12 +8,28 @@
   </div>
 </form>
 
-</section>
-<p>City : {{this.zip?.places[0]["place name"]}}</p>
-<p>State : {{this.zip?.places[0]["state"]}}</p>
-<p>Longitude : {{this.zip?.places[0]["longitude"]}}</p>
-<p>Latitude : {{this.zip?.places[0]["latitude"]}}</p>
+</section><br>
+<div class="container">
+<article class="message is-primary" *ngIf="showMsg">
+  <div class="message-header">
+    <p>Location Info</p>
 
+  </div>
+  <div class="message-body">
+    <ul>
+      <li><strong>City: </strong>{{this.zip?.places[0]["place name"]}}</li>
+      <li><strong>State: </strong>{{this.zip?.places[0]["state"]}}</li>
+      <li><strong>Longitude: </strong>{{this.zip?.places[0]["longitude"]}}</li>
+      <li><strong>Latitude: </strong>{{this.zip?.places[0]["latitude"]}}</li>
+    </ul>
+  </div>
+</article>
+</div>
 
+<div class="container">
+<article class="message is-danger" *ngIf="showMsg==false">
+  <div class="message-body">Invalid Zipcode, please try again</div>
+</article>
+</div>
 
 
